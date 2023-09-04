@@ -105,6 +105,14 @@
 
 .bg-contrast {
     background-color: var(--contrast);
+    padding: var(--size-150) 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--size-20);
+
 }
 
 .service-card {
@@ -123,6 +131,7 @@
     margin-right: 15px;
     background-color: var(--font-color-light);
 }
+
 
 span.bg-color-1 {
     background-image: linear-gradient(90deg, #9ccdf3 0%, #94aafd 100%);
