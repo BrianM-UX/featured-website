@@ -257,6 +257,7 @@ margin-top: -1rem;
 
 .plan-btn-wrapper {text-align: center;}
 
+.testimonials {margin: var(--size-100) 0;}
 
 .testimonial-grid {
 display: grid;
@@ -269,6 +270,7 @@ gap: var(--size-20);
 .testimonials .block-text {
     padding-right: 0;
     text-align: center;
+    margin: var(--size-100) 0;
 }
 
 .testimonial-card {
