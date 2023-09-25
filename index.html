@@ -27,12 +27,11 @@
 
 <body>
     <div id="pageTop"></div>
-    <!--[if lt IE 7]>
-                        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-                    <![endif]-->
-    <nav class="navbar nav">
+    
+    <!-- Nav Bar -->
+    <nav id="topNav"class="navbar nav">
         <div class="container">
-            <button class="navbar-toggle" area-expanded="false" aria-controls="navbarDropdown">
+            <button class="navbar-toggle" aria-expanded="false" aria-controls="navbarDropdown">
                 <span>&#9776;</span>
             </button>
             <a class="navbar-brand" href="index.html">CodeRad</a>
@@ -217,10 +216,10 @@
                         <span class="title">Speedy build tooling</span>
                         <span class="icon times">&#10761</span>
                     </li>
-                    <div class="plan-btn-wrapper">
-                        <a href="" class="btn btn-primary">Get Started</a>
-                    </div>
                 </ul>
+                <div class="plan-btn-wrapper">
+                    <a href="" class="btn btn-primary">Get Started</a>
+                </div>
             </div>
 
             <div class="price-card">
@@ -343,17 +342,13 @@
                     <h5>Services</h5>
                     <div class="services-wrapper">
                         <h5>Mobile Apps</h5>
-                        <p>Convallis posuere morbi leo urna molestie at. Non sodales neque sodales ut etiam sit amet
-                            nisl
-                            purus.</p>
+                        <p>Convallis posuere morbi leo urna molestie at. Non sodales neque sodales ut </p>
+
                         <h5>Brand Identity</h5>
-                        <p>Convallis posuere morbi leo urna molestie at. Non sodales neque sodales ut etiam sit amet
-                            nisl
-                            purus.</p>
+                        <p>Convallis posuere morbi leo urna molestie at. Non sodales neque sodales ut </p>
+
                         <h5>Social Media</h5>
-                        <p>Convallis posuere morbi leo urna molestie at. Non sodales neque sodales ut etiam sit amet
-                            nisl
-                            purus.</p>
+                        <p>Convallis posuere morbi leo urna molestie at. Non sodales neque sodales ut </p>
                     </div>
                 </div>
 
@@ -404,6 +399,28 @@
         <i class="fa-solid fa-arrow-up"></i>
     </a>
 
+        <!-- JS -->
+        <script>
+            const nav = document.getElementById("topNav");
+            window.onscroll = function () {
+                if (window.pageYOffset > 100) {
+                    nav.classList.add("sticky");
+                }
+                else {
+                    nav.classList.remove("sticky");
+                }
+            }
+
+
+            const navButton = document.querySelector('button[aria-expanded]');
+
+            function toggleNav({ target }) {
+                const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+                navButton.setAttribute('aria-expanded', !expanded);
+            }
+
+            navButton.addEventListener('click', toggleNav);
+        </script>
 </body>
 
 </html>
